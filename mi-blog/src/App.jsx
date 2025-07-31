@@ -1,15 +1,18 @@
 import './App.css'
-import SimpleForm from './Components/SimpleForm'
-import ArticulosBlog from './Components/ArticulosBlog.jsx'
+import { UserProvider } from './context/UserContext'
+import Header from './components/Header'
+import Loging from './components/Login'
+import ContenidoPrivado from './components/ContenidoPrivado'
 
 
 function App() {
 
   return (
-    <>
-      <h1>Uso de APIS con react y useEffect</h1>
-      <ArticulosBlog />
-    </>
+    <UserProvider>
+    <Header />
+    <Loging />
+    <ContenidoPrivado />
+  </UserProvider>
   )
 }
 
